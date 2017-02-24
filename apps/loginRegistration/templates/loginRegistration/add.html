@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Add_a_Trip</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'loginRegistration/css/normalize.css' %}">
+		<link rel="stylesheet" href="{% static 'loginRegistration/css/skeleton.css' %}">
+		<link rel="stylesheet" href="{% static 'loginRegistration/css/styles.css' %}">
+	</head>
+		<h3> Add a Trip</h3>
+	<body>
+		<form class="add" action="/add" method="POST">
+			{% csrf_token %}
+			<label for="Destination:">Destination</label>
+			<input type="text" name="destination" id="destination">
+
+			<label for="Description:">Description</label>
+			<input type="text" name="description" id="description">
+
+			<label for="Travel Date From:">Travel Date From:</label>
+			<input type="text" name="from" id="from">
+
+			<label for="Travel Date To:">Travel Date To:</label>
+			<input type="to" name="to" id="to">
+
+			<input type="submit" name="add" id="add" value="Add">
+
+		</form>
+	</body>
+</html>

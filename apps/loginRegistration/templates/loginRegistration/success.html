@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Success!</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'loginRegistration/css/normalize.css' %}">
+		<link rel="stylesheet" href="{% static 'loginRegistration/css/skeleton.css' %}">
+		<link rel="stylesheet" href="{% static 'loginRegistration/css/styles.css' %}">
+	</head>
+	<a href='logout'>Log Out</a>
+	<body>
+		<div class="process" action="/process">
+			{% if messages %}
+			{% for message in messages %}
+			<h2>{{ message }} </h2>
+			{% endfor %}
+			{% endif %}
+		</div>
+	<table>
+		<h3>Hello!</h3>
+		<h4>Your Trip Schedules</h4>
+		<thead>
+			<tr>
+				<th>Destination</th>
+				<th>Travel Start Date</th>
+				<th>Travel End Date</th>
+				<th>Plan</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td> <!-- Your Trip Information -->
+				<td></td> <!-- Your Trip Information -->
+				<td></td> <!-- Your Trip Information -->
+				<td></td> <!-- Your Trip Information -->
+			</tr>
+		</tbody>
+		<table>
+			<h4>Other User's Travel Plans</h4>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Destination</th>
+					<th>Travel Start Date</th>
+					<th>Travel End Date</th>
+					<th>Do You Want to Join?</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td> <!-- Your Trip Information -->
+					<td></td> <!-- Your Trip Information -->
+					<td></td> <!-- Your Trip Information -->
+					<td></td> <!-- Your Trip Information -->
+					<td></td> <!-- Your Trip Information -->
+				</tr>
+			</tbody>
+	</table>
+		<a href='Add Travel Plan'></a>
+	</body>
+</html>
